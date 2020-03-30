@@ -6,6 +6,7 @@
 // qui sicuramente da cercare ci sarà il come revertare una parola
 var parola= document.getElementById("chiedere");
 var mettiNome=parola.value;
+var risultato;
 
 var stampa=document.getElementById("risultato");
 stampa.innerHTML=mettiNome;
@@ -14,34 +15,53 @@ var bottone =document.getElementById("push");
 bottone.addEventListener("click",
 // var ghost = document.getElementById("dasparire");
 // ghost.style.color="initial";
+
    function() {
  var mettiNome = parola.value;
    //stampo nome
    var stampa = document.getElementById("risultato");
     stampa.innerHTML = mettiNome;
+    console.log(mettiNome);
+
+    //
+    var parolaInversa = mettiNome.reverse;
+
+    var parolaPalindroma = isPalindroma("anna");
+
+    if (parolaPalindroma === true){
+        console.log("well");
+    }else if (parolaPalindroma != mettiNome.reverse) {
+        console.log("no good");
+    }
+    else {
+        console.log("no good");
+    }
+
 // var parolaInversa;
 // var isPalindroma;
   }
 ) ;
-// function isPalindroma(parola) {
-//
-//
-//     var parolaInversa = parola.reverse;
-//
-//     if (parola==parolaInversa){
-//         risultato="well";
-//         console.log(risultato);
-//     }else {
-//         console.log();
-//     }
-// }
-//
-// // devi dirmi se la parola è palindroma
-//
-// var parolaPalindroma = isPalindroma("anna");
-//
-// if (parolaPalindroma == true) {
-// console.log();
-// } else {
-//     console.log();
-// }
+
+
+function isPalindroma(parola) {
+
+
+    var parolaInversa = parola.reverse;
+
+    if (parola==parolaInversa){
+        risultato="well";
+        console.log(risultato);
+    }else {
+        console.log();
+    }
+}
+
+// devi dirmi se la parola è palindroma
+
+var parolaPalindroma = isPalindroma("anna");
+
+if (parolaPalindroma == true) {
+console.log();
+} else {
+    console.log();
+}
